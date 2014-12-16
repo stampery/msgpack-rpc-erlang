@@ -131,7 +131,7 @@ spawn_request_handler(CallID, Module, M, Argv)->
                     Result = erlang:apply(Module,Method,Argv),
                     %% ?debugVal({Method, Argv}),
                     %% ?debugVal(Result),
-                    Pid ! {reply, msgpack:pack(Prefix ++ [nil, Result])}
+                    Pid ! {reply, msgpack:pack(Prefix ++ Result)}
                 catch
                     error:Reason ->
                         error_logger:error_msg("no such method: ~p / ~p", [Method, Reason]),
