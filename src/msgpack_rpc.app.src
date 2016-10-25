@@ -1,10 +1,13 @@
 {application, msgpack_rpc,
  [{description, "MessagePack RPC client/server suite"},
-  {vsn, "0.6.3"},
+  {pkg_name, "msgpack_rpc_erlang"},
+  {vsn, "0.6.4"},
   {modules,
    [msgpack_rpc_client, msgpack_rpc_connection, msgpack_rpc_protocol]
   },
-%  {registered, []},
-%  {mod, {mp_server_app, []}},
   {env, []},
-  {applications, [kernel, stdlib]}]}.
+  {applications, [kernel, stdlib]},
+  {licenses, ["Apache"]},
+  {links, [{"GitHub", "https://github.com/stampery/msgpack-rpc-erlang/tree/hexpm"}]},
+  {maintainers, ["Kota Uenishi", "Adan Sanchez de Pedro"]}
+]}.
